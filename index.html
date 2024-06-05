@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shedrick Bridgeforth - Data Guy</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -73,46 +74,6 @@
             width: 100%;
             bottom: 0;
         }
-        /* Timeline styles */
-        .timeline {
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-            position: relative;
-        }
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #2563eb;
-        }
-        .timeline-item {
-            margin: 20px 0;
-            padding-left: 40px;
-            padding-right: 40px;
-            position: relative;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background: #2563eb;
-            border-radius: 50%;
-            top: 20px;
-            margin-left: -10px;
-        }
-        .timeline-content {
-            padding: 20px;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
     </style>
 </head>
 <body>
@@ -149,27 +110,14 @@
     </section>
     <section id="timeline">
         <h2>Timeline</h2>
-        <ul class="timeline">
-            <li class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Event Title 1</h3>
-                    <p>Description of event 1. More details can be added here.</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Event Title 2</h3>
-                    <p>Description of event 2. More details can be added here.</p>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Event Title 3</h3>
-                    <p>Description of event 3. More details can be added here.</p>
-                </div>
-            </li>
-            <!-- Add more timeline events as needed -->
-        </ul>
+        <div id="timeline-embed" style="width: 100%; height: 600px"></div>
+        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+        <script type="text/javascript">
+            var additionalOptions = {
+                start_at_slide: 0
+            };
+            window.timeline = new TL.Timeline('timeline-embed', 'timeline.json', additionalOptions);
+        </script>
     </section>
     <div class="footer">
         &copy; 2024 Shedrick Bridgeforth. All rights reserved.
@@ -177,5 +125,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
 
 
