@@ -113,10 +113,12 @@
         <div id="timeline-embed" style="width: 100%; height: 600px"></div>
         <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
         <script type="text/javascript">
+            console.log('Initializing TimelineJS'); // Log message for initialization
             var additionalOptions = {
                 start_at_slide: 0
             };
             window.timeline = new TL.Timeline('timeline-embed', 'https://bridgeforth6.github.io/timeline.json', additionalOptions);
+            console.log('TimelineJS Initialized'); // Log message after initialization
         </script>
     </section>
     <div class="footer">
