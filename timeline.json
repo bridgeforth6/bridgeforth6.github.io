@@ -1,0 +1,48 @@
+{
+    "title": {
+        "media": {
+            "url": "https://example.com/thumbnail.jpg",
+            "caption": "Shedrick Bridgeforth",
+            "credit": ""
+        },
+        "text": {
+            "headline": "Shedrick Bridgeforth - Data Guy",
+            "text": "<p>This is an interactive timeline of my projects and career highlights.</p>"
+        }
+    },
+    "events": [
+        {
+            "media": {
+                "url": "https://example.com/image1.jpg",
+                "caption": "Project 1",
+                "credit": ""
+            },
+            "start_date": {
+                "year": "2021",
+                "month": "1",
+                "day": "1"
+            },
+            "text": {
+                "headline": "Project 1",
+                "text": "<p>Description of project 1.</p>"
+            }
+        },
+        {
+            "media": {
+                "url": "https://example.com/image2.jpg",
+                "caption": "Project 2",
+                "credit": ""
+            },
+            "start_date": {
+                "year": "2022",
+                "month": "6",
+                "day": "15"
+            },
+            "text": {
+                "headline": "Project 2",
+                "text": "<p>Description of project 2.</p>"
+            }
+        }
+        // Add more events as needed
+    ]
+}
