@@ -96,30 +96,30 @@
             width: 50%;
         }
         .left {
-            left: 50%;
+            left: 0;
         }
         .right {
-            left: -80px;
+            left: 50%;
         }
         .left::before {
             content: '';
             position: absolute;
             height: 6px;
-            width: 80px;
+            width: calc(50% - 40px);
             background-color: #2563eb;
             top: 50%;
             transform: translateY(-50%);
-            left: -80px;
+            right: -100%;
         }
         .right::before {
             content: '';
             position: absolute;
             height: 6px;
-            width: 80px;
+            width: calc(50% - 40px);
             background-color: #2563eb;
             top: 50%;
             transform: translateY(-50%);
-            right: -80px;
+            left: -100%;
         }
         .content {
             padding: 20px 30px;
