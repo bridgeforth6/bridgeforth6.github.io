@@ -97,31 +97,11 @@
         }
         .left {
             left: 0;
+            transform: translateX(-50px);
         }
         .right {
             left: 50%;
-        }
-        .left::before {
-            content: '';
-            position: absolute;
-            height: 6px;
-            width: calc(50% - 20px);
-            background-color: #2563eb;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 100%;
-            margin-left: -3px;
-        }
-        .right::before {
-            content: '';
-            position: absolute;
-            height: 6px;
-            width: calc(50% - 20px);
-            background-color: #2563eb;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 100%;
-            margin-right: -3px;
+            transform: translateX(-50px);
         }
         .content {
             padding: 20px 30px;
