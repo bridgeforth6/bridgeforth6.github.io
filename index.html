@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shedrick Bridgeforth - Data Guy</title>
+    <title>Kids Comics Unite Timeline</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -14,116 +13,131 @@
             background-color: #f0f4f8;
             color: #333;
         }
-        header {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
             background-color: #2563eb;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #1e3a8a;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .icon-button {
-            display: flex;
-            align-items: center;
-            background-color: #2563eb;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .icon-button:hover {
-            background-color: #1e3a8a;
-        }
-        .icon-button i {
-            margin-right: 10px;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #1e3a8a;
-            color: white;
-            position: fixed;
-            width: 100%;
+            top: 0;
             bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: ' ';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #2563eb;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .content img {
+            width: 100%;
+            border-radius: 6px;
+        }
+        .date {
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Shedrick Bridgeforth</h1>
-        <p>Data Guy</p>
-    </header>
-    <nav>
-        <a href="#about-me" title="insert text here">About Me</a>
-        <a href="#projects" title="insert text here">Projects</a>
-        <a href="#contact" title="insert text here">Contact</a>
-        <a href="#blog" title="insert text here">Blog</a>
-    </nav>
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Welcome to my personal webpage! I am Shedrick Bridgeforth, a professional Data Guy. I specialize in data analysis, visualization, and deriving actionable insights from complex datasets.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I've worked on:</p>
-        <ul>
-            <li title="insert text here">Project 1: Description of project 1</li>
-            <li title="insert text here">Project 2: Description of project 2</li>
-            <li title="insert text here">Project 3: Description of project 3</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <button class="icon-button" title="insert text here"><i class="fas fa-envelope"></i>Email Me</button>
-    </section>
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Welcome to my blog! Here, I share insights and articles on data analysis, visualization, and more.</p>
-    </section>
-    <section id="timeline">
-        <h2>Timeline</h2>
-        <div id="timeline-embed" style="width: 100%; height: 600px"></div>
-        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-        <script type="text/javascript">
-            console.log('Initializing TimelineJS'); // Log message for initialization
-            var additionalOptions = {
-                start_at_slide: 0
-            };
-            window.timeline = new TL.Timeline('timeline-embed', 'https://bridgeforth6.github.io/timeline.json', additionalOptions);
-            console.log('TimelineJS Initialized'); // Log message after initialization
-        </script>
-    </section>
-    <div class="footer">
-        &copy; 2024 Shedrick Bridgeforth. All rights reserved.
+
+<div class="timeline">
+    <div class="timeline-item left">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="May 2020">
+            <p class="date">May 2020</p>
+            <p>Janna hosts the first free masterclass and launches the first Kids Comics Intensive course.</p>
+        </div>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <div class="timeline-item right">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="September 2020">
+            <p class="date">September 2020</p>
+            <p>Kids Comics Studio, KCU's subscription membership program, begins.</p>
+        </div>
+    </div>
+    <div class="timeline-item left">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="June 2021">
+            <p class="date">June 2021</p>
+            <p>A group of summer interns come on board to help Janna plan the KCU website.</p>
+        </div>
+    </div>
+    <div class="timeline-item right">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="July 2021">
+            <p class="date">July 2021</p>
+            <p>We host a logo contest and winner Jonathan St. Amant designs the KCU mascot characters.</p>
+        </div>
+    </div>
+    <div class="timeline-item left">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="October 2021">
+            <p class="date">October 2021</p>
+            <p>Our first ever workshop "Pitchcraft" is a go.</p>
+        </div>
+    </div>
+    <div class="timeline-item right">
+        <div class="content">
+            <img src="https://bridgeforth6.github.io/images/IMG_0746.jpg" alt="November 2021">
+            <p class="date">November 2021</p>
+            <p>KCU at AnimeNYC.</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
