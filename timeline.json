@@ -1,7 +1,7 @@
 {
     "title": {
         "media": {
-            "url": "https://example.com/thumbnail.jpg",
+            "url": "https://bridgeforth6.github.io/images/IMG_0746.jpg",
             "caption": "Shedrick Bridgeforth",
             "credit": ""
         },
@@ -13,7 +13,7 @@
     "events": [
         {
             "media": {
-                "url": "https://example.com/image1.jpg",
+                "url": "https://bridgeforth6.github.io/images/IMG_0746.jpg",
                 "caption": "Project 1",
                 "credit": ""
             },
@@ -29,7 +29,7 @@
         },
         {
             "media": {
-                "url": "https://example.com/image2.jpg",
+                "url": "https://bridgeforth6.github.io/images/IMG_0746.jpg",
                 "caption": "Project 2",
                 "credit": ""
             },
